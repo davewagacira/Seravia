@@ -13,6 +13,7 @@ export function Hero() {
           muted
           loop
           playsInline
+          className="pointer-events-none"
           style={{
             position: 'absolute',
             top: '50%',
@@ -22,7 +23,9 @@ export function Hero() {
             minHeight: '100%',
             width: 'auto',
             height: 'auto',
-            objectFit: 'cover'
+            objectFit: 'cover',
+            animation: 'none',
+            transition: 'none'
           }}
         >
           <source src="https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Skincare_Cream_Application_Video_Generation.mp4" type="video/mp4" />
