@@ -1,7 +1,7 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight, ChevronDown } from "lucide-react"
+import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
@@ -33,7 +33,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 pb-28 pt-24 sm:px-6 sm:pb-32 lg:px-8 lg:pb-36">
+      <div className="relative z-10 w-full px-4 pb-20 pt-24 sm:px-6 sm:pb-24 lg:px-8 lg:pb-28">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto w-full max-w-[22rem] text-center sm:max-w-[28rem] lg:mx-0 lg:max-w-xl lg:text-left">
             <span className="text-sm uppercase mb-6 block text-[#2f2520] animate-blur-in opacity-0 tracking-[0.22em]" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
@@ -55,17 +55,18 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 boty-transition" />
               </Link>
             </div>
+            <div className="mt-6 flex justify-center lg:justify-start">
+              <a
+                href="#trust-badges"
+                aria-label="Scroll to organic certified section"
+                className="animate-bounce text-4xl leading-none text-[#201714] boty-transition hover:text-primary"
+              >
+                ↓
+              </a>
+            </div>
           </div>
         </div>
       </div>
-
-      <a
-        href="#trust-badges"
-        aria-label="Scroll to organic certified section"
-        className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center rounded-full bg-background/75 p-3 text-foreground shadow-sm backdrop-blur-sm boty-transition hover:bg-background/90 hover:text-primary"
-      >
-        <ChevronDown className="h-6 w-6 animate-bounce" />
-      </a>
     </section>
   )
 }
