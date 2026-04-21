@@ -8,12 +8,20 @@ export function Hero() {
     <section className="relative flex min-h-screen items-center overflow-hidden" style={{ backgroundColor: '#e3e1e2' }}>
       {/* Background Video */}
       <div className="absolute inset-0" style={{ backgroundColor: '#e3e1e2' }}>
+        <img
+          src="/images/hero-model.jpg"
+          alt=""
+          aria-hidden="true"
+          className="pointer-events-none absolute inset-0 h-full w-full object-cover"
+        />
         <video
           autoPlay
           muted
           loop
           playsInline
           className="pointer-events-none"
+          preload="auto"
+          poster="/images/hero-model.jpg"
           style={{
             position: 'absolute',
             top: '50%',
