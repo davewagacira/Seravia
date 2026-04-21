@@ -39,11 +39,11 @@ export function Hero() {
             <span className="text-sm uppercase mb-6 block text-[#2f2520] animate-blur-in opacity-0 tracking-[0.22em]" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               Kenyan Botanical Skincare
             </span>
-            <h2 className="mb-6 font-serif text-[3.1rem] leading-[0.95] text-balance text-[#201714] [text-shadow:0_3px_18px_rgba(255,248,240,0.35)] sm:text-6xl lg:text-7xl">
+            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6 text-balance text-[#201714] [text-shadow:0_3px_18px_rgba(255,248,240,0.35)]">
               <span className="block animate-blur-in opacity-0 font-semibold" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>Glow gently.</span>
-              <span className="block animate-blur-in opacity-0 font-semibold text-[4rem] sm:text-[4.75rem] xl:text-9xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Naturally you.</span>
+              <span className="block animate-blur-in opacity-0 font-semibold xl:text-9xl text-7xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Naturally you.</span>
             </h2>
-            <p className="mb-10 max-w-md mx-auto text-base leading-relaxed text-[#322721] animate-blur-in opacity-0 [text-shadow:0_2px_12px_rgba(255,248,240,0.28)] sm:text-lg lg:mx-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
+            <p className="text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0 text-[#322721] animate-blur-in opacity-0 [text-shadow:0_2px_12px_rgba(255,248,240,0.28)]" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               Discover skincare inspired by Kenya's calm, sunlit rituals. Pure ingredients, gentle routines, radiant results.
             </p>
             <div className="flex flex-col justify-center gap-4 animate-blur-in opacity-0 sm:flex-row lg:justify-start" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
