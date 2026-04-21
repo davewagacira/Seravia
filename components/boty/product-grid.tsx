@@ -143,6 +143,7 @@ const categories = [
 
 export function ProductGrid() {
   const [selectedCategory, setSelectedCategory] = useState<Category>("cream")
+  const [currentPage, setCurrentPage] = useState(1)
   const [isVisible, setIsVisible] = useState(false)
   const [isTransitioning, setIsTransitioning] = useState(false)
   const [headerVisible, setHeaderVisible] = useState(false)
@@ -151,10 +152,14 @@ export function ProductGrid() {
   const { addItem } = useCart()
   
   const filteredProducts = products.filter(product => product.category === selectedCategory)
+  const productsPerPage = 10
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage)
+  const paginatedProducts = filteredProducts.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage)
 
   const handleCategoryChange = (category: Category) => {
     if (category !== selectedCategory) {
       setIsTransitioning(true)
+      setCurrentPage(1)
       setTimeout(() => {
         setSelectedCategory(category)
         setTimeout(() => {
@@ -211,13 +216,13 @@ export function ProductGrid() {
 
   return (
     <section className="py-24 bg-card">
-      <div className="max-w-7xl mx-auto px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div ref={headerRef} className="text-center mb-16">
           <span className={`text-sm tracking-[0.3em] uppercase text-primary mb-4 block ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.2s', animationFillMode: 'forwards' } : {}}>
             Our Collection
           </span>
-          <h2 className={`font-serif leading-tight text-foreground mb-4 text-balance text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
+          <h2 className={`font-serif leading-tight text-foreground mb-4 text-balance text-5xl sm:text-6xl lg:text-7xl ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.4s', animationFillMode: 'forwards' } : {}}>
             Gentle essentials
           </h2>
           <p className={`text-lg text-muted-foreground max-w-md mx-auto ${headerVisible ? 'animate-blur-in opacity-0' : 'opacity-0'}`} style={headerVisible ? { animationDelay: '0.6s', animationFillMode: 'forwards' } : {}}>
@@ -256,9 +261,9 @@ export function ProductGrid() {
         {/* Product Grid */}
         <div 
           ref={gridRef}
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-4"
         >
-          {filteredProducts.map((product, index) => (
+          {paginatedProducts.map((product, index) => (
             <Link
               key={`${selectedCategory}-${product.id}`}
               href={`/product/${product.id}`}
@@ -311,13 +316,13 @@ export function ProductGrid() {
                 </div>
 
                 {/* Info */}
-                <div className="p-5">
-                  <h3 className="font-serif text-lg text-foreground mb-1">{product.name}</h3>
-                  <p className="text-sm text-muted-foreground mb-3">{product.description}</p>
+                <div className="p-4 sm:p-5">
+                  <h3 className="font-serif text-base text-foreground mb-1 sm:text-lg">{product.name}</h3>
+                  <p className="text-xs text-muted-foreground mb-3 sm:text-sm">{product.description}</p>
                   <div className="flex items-center gap-2">
-                    <span className="font-medium text-foreground">{formatPrice(product.price)}</span>
+                    <span className="text-sm font-medium text-foreground sm:text-base">{formatPrice(product.price)}</span>
                     {product.originalPrice && (
-                      <span className="text-sm text-muted-foreground line-through">
+                      <span className="text-xs text-muted-foreground line-through sm:text-sm">
                         {formatPrice(product.originalPrice)}
                       </span>
                     )}
@@ -327,6 +332,30 @@ export function ProductGrid() {
             </Link>
           ))}
         </div>
+
+        {totalPages > 1 && (
+          <div className="mt-10 flex items-center justify-center gap-3">
+            <button
+              type="button"
+              onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+              disabled={currentPage === 1}
+              className="rounded-full border border-foreground/15 px-4 py-2 text-sm text-foreground boty-transition disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Previous
+            </button>
+            <span className="text-sm text-muted-foreground">
+              Page {currentPage} of {totalPages}
+            </span>
+            <button
+              type="button"
+              onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+              disabled={currentPage === totalPages}
+              className="rounded-full border border-foreground/15 px-4 py-2 text-sm text-foreground boty-transition disabled:cursor-not-allowed disabled:opacity-40"
+            >
+              Next
+            </button>
+          </div>
+        )}
 
         {/* View All Button */}
         <div className="text-center mt-12">

@@ -6,72 +6,72 @@ import { Star } from "lucide-react"
 const testimonials = [
   {
     id: 1,
-    name: "Sarah M.",
-    location: "New York",
+    name: "Wanjiru M.",
+    location: "Lavington, Nairobi",
     rating: 5,
     text: "My skin has never felt so soft and nourished. The Radiance Serum is now a permanent part of my morning routine.",
     product: "Radiance Serum"
   },
   {
     id: 2,
-    name: "Emma L.",
-    location: "Los Angeles",
+    name: "Achieng O.",
+    location: "Karen, Nairobi",
     rating: 5,
     text: "Finally, skincare that actually feels natural. No more harsh chemicals. My sensitive skin loves Seravia products.",
     product: "Gentle Cleanser"
   },
   {
     id: 3,
-    name: "Jessica R.",
-    location: "Chicago",
+    name: "Njeri K.",
+    location: "Kileleshwa, Nairobi",
     rating: 5,
     text: "The Hydra Cream is absolutely divine. It absorbs beautifully and keeps my skin hydrated all day long.",
     product: "Hydra Cream"
   },
   {
     id: 4,
-    name: "Maria K.",
-    location: "Miami",
+    name: "Atieno S.",
+    location: "Westlands, Nairobi",
     rating: 5,
     text: "I've tried countless serums but nothing compares to the glow I get from Seravia. Absolutely transformative.",
     product: "Glow Serum"
   },
   {
     id: 5,
-    name: "Sophie T.",
-    location: "Seattle",
+    name: "Mwende N.",
+    location: "Runda, Nairobi",
     rating: 5,
     text: "The packaging is beautiful and sustainable. I feel good knowing I'm choosing eco-friendly skincare.",
     product: "Night Cream"
   },
   {
     id: 6,
-    name: "Anna P.",
-    location: "Boston",
+    name: "Chebet J.",
+    location: "Kilimani, Nairobi",
     rating: 5,
     text: "My acne-prone skin has cleared up since switching to Seravia. Natural ingredients really make a difference.",
     product: "Gentle Cleanser"
   },
   {
     id: 7,
-    name: "Claire B.",
-    location: "Austin",
+    name: "Akinyi D.",
+    location: "Nyali, Mombasa",
     rating: 5,
     text: "The texture of the Renewal Oil is perfection. It absorbs quickly and leaves my skin glowing.",
     product: "Renewal Oil"
   },
   {
     id: 8,
-    name: "Lily W.",
-    location: "Portland",
+    name: "Mutheu P.",
+    location: "Spring Valley, Nairobi",
     rating: 5,
     text: "I love that Seravia is cruelty-free and vegan. Great products that align with my values.",
     product: "Hydra Cream"
   },
   {
     id: 9,
-    name: "Rachel D.",
-    location: "Denver",
+    name: "Nasimiyu T.",
+    location: "Syokimau, Machakos",
     rating: 5,
     text: "The scent is so subtle and natural. No overpowering fragrances, just pure botanical goodness.",
     product: "Radiance Serum"

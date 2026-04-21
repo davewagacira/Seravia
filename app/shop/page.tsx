@@ -1,6 +1,7 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
+import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { ShoppingBag, SlidersHorizontal, X } from "lucide-react"
 import { Header } from "@/components/boty/header"
@@ -158,7 +159,10 @@ const products = [
 const categories = ["all", "serums", "moisturizers", "cleansers", "oils", "masks", "toners"]
 
 export default function ShopPage() {
+  const searchParams = useSearchParams()
+  const requestedCategory = searchParams.get("category")
   const [selectedCategory, setSelectedCategory] = useState("all")
+  const [currentPage, setCurrentPage] = useState(1)
   const [showFilters, setShowFilters] = useState(false)
   const [isVisible, setIsVisible] = useState(false)
   const gridRef = useRef<HTMLDivElement>(null)
@@ -166,6 +170,15 @@ export default function ShopPage() {
   const filteredProducts = selectedCategory === "all"
     ? products
     : products.filter(p => p.category === selectedCategory)
+  const productsPerPage = 10
+  const totalPages = Math.ceil(filteredProducts.length / productsPerPage)
+  const paginatedProducts = filteredProducts.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage)
+
+  useEffect(() => {
+    if (requestedCategory && categories.includes(requestedCategory)) {
+      setSelectedCategory(requestedCategory)
+    }
+  }, [requestedCategory])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -191,6 +204,7 @@ export default function ShopPage() {
   // Reset animation when category changes
   useEffect(() => {
     setIsVisible(false)
+    setCurrentPage(1)
     const timer = setTimeout(() => setIsVisible(true), 50)
     return () => clearTimeout(timer)
   }, [selectedCategory])
@@ -200,7 +214,7 @@ export default function ShopPage() {
       <Header />
       
       <div className="pt-28 pb-20">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
           <div className="text-center mb-12">
             <span className="text-sm tracking-[0.3em] uppercase text-primary mb-4 block">
@@ -215,7 +229,7 @@ export default function ShopPage() {
           </div>
 
           {/* Filter Bar */}
-          <div className="flex items-center justify-between mb-10 pb-6 border-b border-border/50">
+          <div className="flex items-center justify-between gap-4 mb-10 pb-6 border-b border-border/50">
             <button
               type="button"
               onClick={() => setShowFilters(!showFilters)}
@@ -243,7 +257,7 @@ export default function ShopPage() {
               ))}
             </div>
 
-            <span className="text-sm text-muted-foreground">
+            <span className="text-right text-sm text-muted-foreground">
               {filteredProducts.length} {filteredProducts.length === 1 ? "product" : "products"}
             </span>
           </div>
@@ -288,9 +302,9 @@ export default function ShopPage() {
           {/* Product Grid */}
           <div 
             ref={gridRef}
-            className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            className="grid grid-cols-2 gap-4 sm:gap-6 lg:grid-cols-3"
           >
-            {filteredProducts.map((product, index) => (
+            {paginatedProducts.map((product, index) => (
               <ProductCard 
                 key={product.id}
                 product={product}
@@ -299,6 +313,30 @@ export default function ShopPage() {
               />
             ))}
           </div>
+
+          {totalPages > 1 && (
+            <div className="mt-10 flex items-center justify-center gap-3">
+              <button
+                type="button"
+                onClick={() => setCurrentPage((page) => Math.max(1, page - 1))}
+                disabled={currentPage === 1}
+                className="rounded-full border border-foreground/15 px-4 py-2 text-sm text-foreground boty-transition disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Previous
+              </button>
+              <span className="text-sm text-muted-foreground">
+                Page {currentPage} of {totalPages}
+              </span>
+              <button
+                type="button"
+                onClick={() => setCurrentPage((page) => Math.min(totalPages, page + 1))}
+                disabled={currentPage === totalPages}
+                className="rounded-full border border-foreground/15 px-4 py-2 text-sm text-foreground boty-transition disabled:cursor-not-allowed disabled:opacity-40"
+              >
+                Next
+              </button>
+            </div>
+          )}
         </div>
       </div>
 
@@ -349,7 +387,7 @@ function ProductCard({
           {/* Quick add button */}
           <button
             type="button"
-            className="absolute bottom-4 right-4 w-12 h-12 rounded-full bg-background/90 backdrop-blur-sm flex items-center justify-center opacity-0 translate-y-2 group-hover:opacity-100 group-hover:translate-y-0 boty-transition boty-shadow"
+            className="absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full bg-background/90 backdrop-blur-sm opacity-100 boty-transition boty-shadow sm:bottom-4 sm:right-4 sm:h-12 sm:w-12 sm:translate-y-2 sm:opacity-0 sm:group-hover:translate-y-0 sm:group-hover:opacity-100"
             onClick={(e) => {
               e.preventDefault()
             }}
@@ -360,13 +398,13 @@ function ProductCard({
         </div>
 
         {/* Info */}
-        <div className="p-6">
-          <h3 className="font-serif text-xl text-foreground mb-1">{product.name}</h3>
-          <p className="text-sm text-muted-foreground mb-4">{product.description}</p>
+        <div className="p-4 sm:p-6">
+          <h3 className="font-serif text-base text-foreground mb-1 sm:text-xl">{product.name}</h3>
+          <p className="text-xs text-muted-foreground mb-3 sm:mb-4 sm:text-sm">{product.description}</p>
           <div className="flex items-center gap-2">
-            <span className="text-lg font-medium text-foreground">{formatPrice(product.price)}</span>
+            <span className="text-sm font-medium text-foreground sm:text-lg">{formatPrice(product.price)}</span>
             {product.originalPrice && (
-              <span className="text-sm text-muted-foreground line-through">
+              <span className="text-xs text-muted-foreground line-through sm:text-sm">
                 {formatPrice(product.originalPrice)}
               </span>
             )}

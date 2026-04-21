@@ -5,9 +5,9 @@ import { ArrowRight } from "lucide-react"
 
 export function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center overflow-hidden" style={{ backgroundColor: '#e3e1e2' }}>
+    <section className="relative flex min-h-screen items-center overflow-hidden" style={{ backgroundColor: '#e3e1e2' }}>
       {/* Background Video */}
-      <div className="border-b border-border/50 p-6 py-2" style={{ backgroundColor: '#e3e1e2' }}>
+      <div className="absolute inset-0 border-b border-border/50" style={{ backgroundColor: '#e3e1e2' }}>
         <video
           autoPlay
           muted
@@ -33,23 +33,23 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full pt-20 mr-14 lg:mr-0">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="w-full lg:max-w-xl mx-auto lg:mx-0 text-center lg:text-left">
+      <div className="relative z-10 w-full px-4 pt-24 sm:px-6 lg:px-8">
+        <div className="mx-auto max-w-7xl">
+          <div className="mx-auto w-full max-w-[22rem] text-center sm:max-w-[28rem] lg:mx-0 lg:max-w-xl lg:text-left">
             <span className="text-sm uppercase mb-6 block text-[#2f2520] animate-blur-in opacity-0 tracking-[0.22em]" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
               Kenyan Botanical Skincare
             </span>
-            <h2 className="font-serif text-5xl md:text-6xl lg:text-7xl leading-[1.05] mb-6 text-balance text-[#201714] [text-shadow:0_3px_18px_rgba(255,248,240,0.35)]">
+            <h2 className="mb-6 font-serif text-[3.1rem] leading-[0.95] text-balance text-[#201714] [text-shadow:0_3px_18px_rgba(255,248,240,0.35)] sm:text-6xl lg:text-7xl">
               <span className="block animate-blur-in opacity-0 font-semibold" style={{ animationDelay: '0.4s', animationFillMode: 'forwards' }}>Glow gently.</span>
-              <span className="block animate-blur-in opacity-0 font-semibold xl:text-9xl text-7xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Naturally you.</span>
+              <span className="block animate-blur-in opacity-0 font-semibold text-[4rem] sm:text-[4.75rem] xl:text-9xl" style={{ animationDelay: '0.6s', animationFillMode: 'forwards' }}>Naturally you.</span>
             </h2>
-            <p className="text-lg leading-relaxed mb-10 max-w-md mx-auto lg:mx-0 text-[#322721] animate-blur-in opacity-0 [text-shadow:0_2px_12px_rgba(255,248,240,0.28)]" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
+            <p className="mb-10 max-w-md mx-auto text-base leading-relaxed text-[#322721] animate-blur-in opacity-0 [text-shadow:0_2px_12px_rgba(255,248,240,0.28)] sm:text-lg lg:mx-0" style={{ animationDelay: '0.8s', animationFillMode: 'forwards' }}>
               Discover skincare inspired by Kenya's calm, sunlit rituals. Pure ingredients, gentle routines, radiant results.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start animate-blur-in opacity-0" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
+            <div className="flex flex-col justify-center gap-4 animate-blur-in opacity-0 sm:flex-row lg:justify-start" style={{ animationDelay: '1s', animationFillMode: 'forwards' }}>
               <Link
                 href="/shop"
-                className="group inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-8 py-4 rounded-full text-sm tracking-wide boty-transition hover:bg-primary/90 boty-shadow"
+                className="group inline-flex w-full items-center justify-center gap-3 rounded-full bg-primary px-8 py-4 text-sm tracking-wide text-primary-foreground boty-transition boty-shadow hover:bg-primary/90 sm:w-auto"
               >
                 Shop Now
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 boty-transition" />
