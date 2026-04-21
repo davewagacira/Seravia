@@ -55,15 +55,6 @@ export function Hero() {
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 boty-transition" />
               </Link>
             </div>
-            <div className="mt-6 flex justify-center lg:justify-start">
-              <a
-                href="#trust-badges"
-                aria-label="Scroll to organic certified section"
-                className="animate-bounce text-4xl leading-none text-[#201714] boty-transition hover:text-primary"
-              >
-                ↓
-              </a>
-            </div>
           </div>
         </div>
       </div>
