@@ -1,0 +1,17 @@
+<svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <clipPath id="rounded">
+      <rect x="10" y="10" width="160" height="160" rx="36" ry="36" />
+    </clipPath>
+  </defs>
+  <rect x="10" y="10" width="160" height="160" rx="36" ry="36" fill="#F7F2EB" />
+  <image
+    href="https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/logos/seravia_logo.jpeg"
+    x="10"
+    y="10"
+    width="160"
+    height="160"
+    preserveAspectRatio="xMidYMid slice"
+    clip-path="url(#rounded)"
+  />
+</svg>
