@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useEffect, useRef } from "react"
-import { useSearchParams } from "next/navigation"
 import Link from "next/link"
 import { ShoppingBag, SlidersHorizontal, X } from "lucide-react"
 import { Header } from "@/components/boty/header"
@@ -159,8 +158,6 @@ const products = [
 const categories = ["all", "serums", "moisturizers", "cleansers", "oils", "masks", "toners"]
 
 export default function ShopPage() {
-  const searchParams = useSearchParams()
-  const requestedCategory = searchParams.get("category")
   const [selectedCategory, setSelectedCategory] = useState("all")
   const [currentPage, setCurrentPage] = useState(1)
   const [showFilters, setShowFilters] = useState(false)
@@ -175,10 +172,13 @@ export default function ShopPage() {
   const paginatedProducts = filteredProducts.slice((currentPage - 1) * productsPerPage, currentPage * productsPerPage)
 
   useEffect(() => {
+    const params = new URLSearchParams(window.location.search)
+    const requestedCategory = params.get("category")
+
     if (requestedCategory && categories.includes(requestedCategory)) {
       setSelectedCategory(requestedCategory)
     }
-  }, [requestedCategory])
+  }, [])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
