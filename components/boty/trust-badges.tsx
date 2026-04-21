@@ -52,7 +52,7 @@ export function TrustBadges() {
   }, [])
 
   return (
-    <section className="py-20 bg-background">
+    <section id="trust-badges" className="py-20 bg-background">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         <div 
           ref={sectionRef}

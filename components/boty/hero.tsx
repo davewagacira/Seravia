@@ -1,13 +1,13 @@
 "use client"
 
 import Link from "next/link"
-import { ArrowRight } from "lucide-react"
+import { ArrowRight, ChevronDown } from "lucide-react"
 
 export function Hero() {
   return (
     <section className="relative flex min-h-screen items-center overflow-hidden" style={{ backgroundColor: '#e3e1e2' }}>
       {/* Background Video */}
-      <div className="absolute inset-0 border-b border-border/50" style={{ backgroundColor: '#e3e1e2' }}>
+      <div className="absolute inset-0" style={{ backgroundColor: '#e3e1e2' }}>
         <video
           autoPlay
           muted
@@ -33,7 +33,7 @@ export function Hero() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 w-full px-4 pt-24 sm:px-6 lg:px-8">
+      <div className="relative z-10 w-full px-4 pb-28 pt-24 sm:px-6 sm:pb-32 lg:px-8 lg:pb-36">
         <div className="mx-auto max-w-7xl">
           <div className="mx-auto w-full max-w-[22rem] text-center sm:max-w-[28rem] lg:mx-0 lg:max-w-xl lg:text-left">
             <span className="text-sm uppercase mb-6 block text-[#2f2520] animate-blur-in opacity-0 tracking-[0.22em]" style={{ animationDelay: '0.2s', animationFillMode: 'forwards' }}>
@@ -59,13 +59,13 @@ export function Hero() {
         </div>
       </div>
 
-      {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-black">
-        <span className="text-xs tracking-widest uppercase font-bold">Scroll</span>
-        <div className="w-px h-12 bg-foreground/20 relative overflow-hidden">
-          <div className="absolute top-0 left-0 w-full h-1/2 bg-foreground/60 animate-pulse" />
-        </div>
-      </div>
+      <a
+        href="#trust-badges"
+        aria-label="Scroll to organic certified section"
+        className="absolute bottom-8 left-1/2 z-20 flex -translate-x-1/2 items-center justify-center rounded-full bg-background/75 p-3 text-foreground shadow-sm backdrop-blur-sm boty-transition hover:bg-background/90 hover:text-primary"
+      >
+        <ChevronDown className="h-6 w-6 animate-bounce" />
+      </a>
     </section>
   )
 }
