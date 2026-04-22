@@ -219,7 +219,7 @@ export function FeatureSection() {
               playsInline
               className="absolute inset-0 w-full h-full object-cover"
             >
-              <source src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/0c826034-d4f2-4d4f-8e99-50e94e4ce63f-dG1CBOjR36xFPTbhcROrHbomGXtlTQ.mp4" type="video/mp4" />
+              <source src="https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Skincare_Cream_Application_Video_Generation.mp4" type="video/mp4" />
             </video>
           </div>
 
