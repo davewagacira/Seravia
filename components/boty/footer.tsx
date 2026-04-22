@@ -30,14 +30,14 @@ export function Footer() {
     <footer className="relative overflow-hidden bg-card pt-16 pb-8 sm:pt-20 sm:pb-10">
       <div className="pointer-events-none absolute inset-x-0 bottom-2 z-0 hidden justify-center select-none sm:bottom-0 md:flex">
         <span className="font-serif text-[96px] font-bold leading-none whitespace-nowrap text-white/10 sm:text-[150px] md:text-[260px] lg:text-[320px]">
-          Seravia
+          SERAVIA
         </span>
       </div>
 
       <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mb-14 grid grid-cols-1 gap-10 text-center sm:grid-cols-2 sm:text-left md:grid-cols-4">
           <div className="sm:col-span-2 md:col-span-1">
-            <h2 className="mb-4 font-serif text-3xl text-foreground">Seravia</h2>
+            <h2 className="mb-4 font-serif text-3xl text-foreground">SERAVIA</h2>
             <p className="mb-6 text-sm leading-relaxed text-muted-foreground">
               Natural skincare for those who believe beauty should feel as good as it looks.
             </p>
@@ -124,7 +124,7 @@ export function Footer() {
         <div className="border-t border-border/50 pt-8">
           <div className="flex flex-col items-center justify-between gap-4 text-center md:flex-row md:text-left">
             <p className="text-sm text-muted-foreground">
-              {"\u00A9"} {new Date().getFullYear()} Seravia. All rights reserved.
+              {"\u00A9"} {new Date().getFullYear()} SERAVIA. All rights reserved.
             </p>
             <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-3 md:justify-end">
               <Link href="/" className="text-sm text-muted-foreground hover:text-foreground boty-transition">
