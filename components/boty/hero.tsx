@@ -36,7 +36,7 @@ export function Hero() {
             transition: 'none'
           }}
         >
-          <source src="https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Seravia%20model.mp4" type="video/mp4" />
+          <source src="https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Skincare_Cream_Application_Video_Generation.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-r from-[rgba(247,242,235,0.72)] via-[rgba(247,242,235,0.28)] to-transparent" />
         {/* Bottom fade gradient */}
