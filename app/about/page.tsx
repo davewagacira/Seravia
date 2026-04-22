@@ -48,7 +48,7 @@ export default function AboutPage() {
 
             <div className="overflow-hidden rounded-[2rem] bg-card boty-shadow">
               <img
-                src="/images/hero-model.jpg"
+                src="https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Seravia_brand_image.png"
                 alt="SERAVIA brand story"
                 className="h-full w-full object-cover"
               />
