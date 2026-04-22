@@ -17,7 +17,7 @@ const products = [
     description: "Vitamin C brightening formula",
     price: 6800,
     originalPrice: null,
-    image: "/images/products/radiance-serum.jpg",
+    image: "https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/seravia_radiance.png",
     badge: "Bestseller",
     category: "serum" as Category
   },

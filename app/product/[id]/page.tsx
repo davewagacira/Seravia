@@ -30,7 +30,7 @@ const products: Record<string, {
     description: "A lightweight, fast-absorbing serum infused with Vitamin C and botanical extracts. Designed to brighten, even skin tone, and reveal your skin's natural radiance.",
     price: 6800,
     originalPrice: null,
-    image: "/images/products/serum.jpg",
+    image: "https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/seravia_radiance.png",
     sizes: ["30ml", "50ml"],
     details: "Our Radiance Serum combines 15% stabilized Vitamin C with rosehip seed oil and sea buckthorn extract. The formula is designed to penetrate deep into the skin, targeting dark spots and uneven tone while protecting against environmental stressors. Suitable for all skin types, this serum is your daily dose of luminosity.",
     howToUse: "Apply 3-4 drops to cleansed face and neck morning and evening. Gently pat into skin until absorbed. Follow with your favorite Seravia moisturizer. For best results, use consistently for 4-6 weeks.",
