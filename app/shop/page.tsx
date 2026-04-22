@@ -57,7 +57,7 @@ const products = [
     description: "Deep moisture with hyaluronic acid",
     price: 5400,
     originalPrice: null,
-    image: "/images/products/cream-jars-colored.png",
+    image: "https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Seravia_Cream.png",
     badge: null,
     category: "moisturizers"
   },

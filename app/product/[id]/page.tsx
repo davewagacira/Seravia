@@ -44,7 +44,7 @@ const products: Record<string, {
     description: "A rich yet lightweight moisturizer that delivers intense hydration without heaviness. Formulated with hyaluronic acid and botanical butters for all-day nourishment.",
     price: 5400,
     originalPrice: null,
-    image: "/images/products/cream-jars-colored.png",
+    image: "https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Seravia_Cream.png",
     sizes: ["50ml", "100ml"],
     details: "Hydra Cream features multi-weight hyaluronic acid to hydrate at every level of the skin. Shea butter and jojoba oil lock in moisture while squalane provides a silky, non-greasy finish. Perfect for normal to dry skin seeking lasting comfort.",
     howToUse: "After cleansing and serum, apply a small amount to face and neck. Massage gently in upward motions. Use morning and evening as the final step of your skincare routine.",
