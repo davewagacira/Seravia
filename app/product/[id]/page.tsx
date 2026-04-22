@@ -37,6 +37,48 @@ const products: Record<string, {
     ingredients: "Aqua, Ascorbic Acid (Vitamin C), Rosa Canina Seed Oil, Hippophae Rhamnoides Oil, Glycerin, Niacinamide, Tocopherol (Vitamin E), Ferulic Acid, Aloe Barbadensis Leaf Juice, Citrus Aurantium Dulcis Peel Oil, Lavandula Angustifolia Oil.",
     delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
   },
+  "hydrating-serum": {
+    id: "hydrating-serum",
+    name: "Hydrating Serum",
+    tagline: "Deep hydration, weightless finish",
+    description: "A moisture-boosting serum that floods the skin with hydration while keeping the finish light, fresh, and comfortable through the day.",
+    price: 6200,
+    originalPrice: null,
+    image: "/images/products/hydrating-serum.jpg",
+    sizes: ["30ml", "50ml"],
+    details: "Hydrating Serum is powered by hyaluronic acid, glycerin, and soothing botanical support ingredients to help skin feel plump, calm, and replenished. It layers beautifully under moisturizer and makeup without feeling sticky.",
+    howToUse: "Apply 3-4 drops to clean, slightly damp skin. Gently press into the face and neck, then follow with moisturizer to seal in hydration.",
+    ingredients: "Aqua, Sodium Hyaluronate, Glycerin, Panthenol, Aloe Barbadensis Leaf Juice, Betaine, Niacinamide, Chamomilla Recutita Extract, Tocopherol.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "age-defense-serum": {
+    id: "age-defense-serum",
+    name: "Age Defense Serum",
+    tagline: "Smooth, renew, and support",
+    description: "An advanced serum designed to support smoother-looking skin with a refined blend of retinol-inspired renewal care and peptide support.",
+    price: 7800,
+    originalPrice: null,
+    image: "/images/products/age-defense-serum.jpg",
+    sizes: ["30ml", "50ml"],
+    details: "Age Defense Serum helps improve the appearance of texture, dullness, and visible fatigue. Its balanced formula supports skin renewal while maintaining a comfortable, elegant feel on the skin.",
+    howToUse: "Apply in the evening after cleansing. Start with 2-3 drops, then follow with moisturizer. Use sunscreen daily when using renewal-focused products.",
+    ingredients: "Aqua, Retinol, Peptide Complex, Niacinamide, Squalane, Glycerin, Centella Asiatica Extract, Tocopherol, Allantoin.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "glow-serum": {
+    id: "glow-serum",
+    name: "Glow Serum",
+    tagline: "Brighten softly, glow daily",
+    description: "A radiance-focused serum that helps the skin look brighter, smoother, and more even while keeping the routine gentle and wearable.",
+    price: 5800,
+    originalPrice: 6800,
+    image: "/images/products/glow-serum.jpg",
+    sizes: ["30ml", "50ml"],
+    details: "Glow Serum pairs niacinamide with hydration support and botanical extracts to help revive dull-looking skin. The result is a fresh, luminous finish that works beautifully in both morning and evening routines.",
+    howToUse: "Apply 3-4 drops after cleansing and before moisturizer. Use morning or evening, and pair with SPF during the day.",
+    ingredients: "Aqua, Niacinamide, Glycerin, Sodium Hyaluronate, Licorice Root Extract, Aloe Barbadensis Leaf Juice, Tocopherol, Panthenol.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
   "hydra-cream": {
     id: "hydra-cream",
     name: "Hydra Cream",
@@ -49,6 +91,34 @@ const products: Record<string, {
     details: "Hydra Cream features multi-weight hyaluronic acid to hydrate at every level of the skin. Shea butter and jojoba oil lock in moisture while squalane provides a silky, non-greasy finish. Perfect for normal to dry skin seeking lasting comfort.",
     howToUse: "After cleansing and serum, apply a small amount to face and neck. Massage gently in upward motions. Use morning and evening as the final step of your skincare routine.",
     ingredients: "Aqua, Butyrospermum Parkii Butter, Simmondsia Chinensis Seed Oil, Sodium Hyaluronate, Squalane, Glycerin, Cetearyl Alcohol, Calendula Officinalis Extract, Chamomilla Recutita Extract, Tocopherol.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "night-cream": {
+    id: "night-cream",
+    name: "Night Cream",
+    tagline: "Restore while you rest",
+    description: "A comforting overnight cream that wraps the skin in moisture and nourishment to support a softer, rested morning look.",
+    price: 6400,
+    originalPrice: null,
+    image: "/images/products/night-cream.jpg",
+    sizes: ["50ml", "100ml"],
+    details: "Night Cream is formulated to deeply cushion the skin through the night with rich hydration, barrier support, and a soft, silky finish that never feels greasy.",
+    howToUse: "Apply as the final step of your evening routine. Smooth over face and neck with upward strokes and leave on overnight.",
+    ingredients: "Aqua, Shea Butter, Squalane, Jojoba Oil, Sodium Hyaluronate, Ceramide Blend, Calendula Extract, Tocopherol.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "day-cream-spf": {
+    id: "day-cream-spf",
+    name: "Day Cream SPF 30",
+    tagline: "Daily hydration with protection",
+    description: "A daytime cream that combines lightweight hydration with SPF 30 protection for a smooth, comfortable everyday finish.",
+    price: 5800,
+    originalPrice: null,
+    image: "/images/products/day-cream-spf.jpg",
+    sizes: ["50ml"],
+    details: "Day Cream SPF 30 helps hydrate and shield the skin in one easy step. It wears well under makeup and leaves the complexion balanced, soft, and protected throughout the day.",
+    howToUse: "Apply generously every morning as the last step in your skincare routine before sun exposure. Reapply as needed during the day.",
+    ingredients: "Aqua, Zinc Oxide, Squalane, Glycerin, Sodium Hyaluronate, Aloe Vera, Niacinamide, Tocopherol.",
     delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
   },
   "gentle-cleanser": {
@@ -78,6 +148,76 @@ const products: Record<string, {
     howToUse: "Apply 4-6 drops to palms and warm between hands. Press gently onto face and neck as the final step of your evening routine. Can also be mixed with moisturizer for added hydration.",
     ingredients: "Argania Spinosa Kernel Oil, Rosa Canina Seed Oil, Sclerocarya Birrea Seed Oil, Tocopherol, Rosa Damascena Flower Oil, Lavandula Angustifolia Oil, Helianthus Annuus Seed Oil, Limonene, Linalool.",
     delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "rosehip-oil": {
+    id: "rosehip-oil",
+    name: "Rosehip Oil",
+    tagline: "Pure nourishment, radiant softness",
+    description: "A lightweight facial oil made to nourish, soften, and support a smoother-looking complexion without heaviness.",
+    price: 4800,
+    originalPrice: null,
+    image: "/images/products/jojoba-oil.jpg",
+    sizes: ["30ml", "50ml"],
+    details: "Rosehip Oil is rich in nourishing fatty acids and antioxidant support, making it an ideal finishing step for skin that feels dry, tired, or in need of extra comfort.",
+    howToUse: "Warm 2-4 drops between palms and press into the skin after serum or moisturizer, morning or evening.",
+    ingredients: "Rosa Canina Seed Oil, Tocopherol, Helianthus Annuus Seed Oil.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "jojoba-oil": {
+    id: "jojoba-oil",
+    name: "Jojoba Oil",
+    tagline: "Balance with a featherlight touch",
+    description: "A balancing facial oil with a naturally lightweight feel, designed to soften and support the skin without leaving a heavy residue.",
+    price: 4200,
+    originalPrice: null,
+    image: "/images/products/jojoba-oil.jpg",
+    sizes: ["30ml", "50ml"],
+    details: "Jojoba Oil helps maintain softness and comfort while mimicking the skin’s natural feel. It is ideal for those who want nourishment with a clean, breathable finish.",
+    howToUse: "Apply 2-3 drops after moisturizer or blend a drop into cream for extra nourishment.",
+    ingredients: "Simmondsia Chinensis Seed Oil, Tocopherol.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "argan-oil": {
+    id: "argan-oil",
+    name: "Argan Oil",
+    tagline: "Moroccan nourishment, daily glow",
+    description: "A rich yet elegant facial oil that helps replenish moisture and leave the skin feeling silky, supple, and cared for.",
+    price: 5600,
+    originalPrice: null,
+    image: "/images/products/argan-oil.jpg",
+    sizes: ["30ml", "50ml"],
+    details: "Argan Oil delivers a luxurious veil of nourishment with a smooth finish that works beautifully for dry, mature, or comfort-seeking skin.",
+    howToUse: "Use 2-4 drops as the final step in your routine, or mix with moisturizer for added richness.",
+    ingredients: "Argania Spinosa Kernel Oil, Tocopherol.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "glow-mask": {
+    id: "glow-mask",
+    name: "Glow Mask",
+    tagline: "Weekly radiance reset",
+    description: "A treatment mask designed to revive dull skin, boost glow, and leave the complexion feeling soft and refreshed.",
+    price: 4500,
+    originalPrice: null,
+    image: "/images/products/mask.jpg",
+    sizes: ["75ml"],
+    details: "Glow Mask offers a weekly reset for skin that looks tired or uneven. Its creamy texture helps smooth the surface and restore a bright, polished appearance.",
+    howToUse: "Apply a generous layer to clean skin, leave on for 10-15 minutes, then rinse thoroughly. Use 1-2 times weekly.",
+    ingredients: "Aqua, Kaolin, Glycerin, Niacinamide, Aloe Vera, Papaya Enzyme, Vitamin E, Chamomile Extract.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
+  },
+  "balance-toner": {
+    id: "balance-toner",
+    name: "Balance Toner",
+    tagline: "Refresh, prep, and rebalance",
+    description: "A lightweight facial mist that helps rebalance the skin after cleansing while adding a fresh layer of hydration.",
+    price: 3200,
+    originalPrice: null,
+    image: "/images/products/toner.jpg",
+    sizes: ["120ml", "200ml"],
+    details: "Balance Toner helps restore comfort after cleansing and prep the skin for the next steps in your routine. The mist-like feel keeps it light, refreshing, and easy to use daily.",
+    howToUse: "Apply with hands or a cotton pad after cleansing, then follow with serum and moisturizer.",
+    ingredients: "Aqua, Rose Water, Glycerin, Aloe Vera, Panthenol, Chamomile Extract, Sodium PCA.",
+    delivery: "Free standard shipping across Kenya on orders over KSh 5,000. Nairobi same-day options and countrywide express delivery are available at checkout. Orders ship within 1-3 business days. Returns are accepted within 30 days if the product is unused and sealed."
   }
 }
 
@@ -102,6 +242,10 @@ export default function ProductPage() {
 
   useEffect(() => {
     window.scrollTo(0, 0)
+    setSelectedSize(product.sizes[0])
+    setQuantity(1)
+    setOpenAccordion("details")
+    setIsAdded(false)
   }, [productId])
 
   const toggleAccordion = (section: AccordionSection) => {
