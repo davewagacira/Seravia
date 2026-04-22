@@ -87,7 +87,7 @@ export default function IngredientsPage() {
           <div className="grid gap-8 rounded-[2rem] bg-card p-8 lg:grid-cols-2 lg:p-12">
             <div className="overflow-hidden rounded-[1.5rem]">
               <img
-                src="/images/natural-leaf.jpg"
+                src="https://curlgvbgasphosyhfncx.supabase.co/storage/v1/object/public/images/images/projects/Seravia_ingredients.png"
                 alt="Natural SERAVIA ingredients"
                 className="h-full w-full object-cover"
               />
